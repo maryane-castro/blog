@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2025-03-01T12:50:08-03:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Maryane Castro blog</title><subtitle>programming and animals</subtitle><entry><title type="html">Anaconda libstdc++.so.6: version `GLIBCXX_3.4.20’ not found</title><link href="http://localhost:4000/blog/anaconda/error/fix/2025/03/01/post-1.html" rel="alternate" type="text/html" title="Anaconda libstdc++.so.6: version `GLIBCXX_3.4.20’ not found" /><published>2025-03-01T09:48:04-03:00</published><updated>2025-03-01T09:48:04-03:00</updated><id>http://localhost:4000/blog/anaconda/error/fix/2025/03/01/post-1</id><content type="html" xml:base="http://localhost:4000/blog/anaconda/error/fix/2025/03/01/post-1.html"><![CDATA[<p>Recently, while trying to run an Anaconda environment, I encountered the following error:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2025-03-01T12:58:30-03:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Maryane Castro blog</title><subtitle>programming and animals</subtitle><entry><title type="html">Anaconda libstdc++.so.6: version `GLIBCXX_3.4.20’ not found</title><link href="http://localhost:4000/blog/anaconda/error/fix/2025/03/01/post-1.html" rel="alternate" type="text/html" title="Anaconda libstdc++.so.6: version `GLIBCXX_3.4.20’ not found" /><published>2025-03-01T09:48:04-03:00</published><updated>2025-03-01T09:48:04-03:00</updated><id>http://localhost:4000/blog/anaconda/error/fix/2025/03/01/post-1</id><content type="html" xml:base="http://localhost:4000/blog/anaconda/error/fix/2025/03/01/post-1.html"><![CDATA[<p>Recently, while trying to run an Anaconda environment, I encountered the following error:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>libstdc++.so.6: version `GLIBCXX_3.4.20' not found
 </code></pre></div></div>
@@ -44,7 +44,7 @@
 
 <p><em>A detailed analysis of the differences between these AI architectures</em></p>
 
-<p><img src="./assets/deepseekGPT.png" alt="DeepSeek vs ChatGPT Comparison" /></p>
+<p><img src="../../../../../assets/deepseekGPT.png" alt="DeepSeek vs ChatGPT Comparison" /></p>
 
 <h2 id="what-are-deepseek-and-chatgpt">What are DeepSeek and ChatGPT?</h2>
 

@@ -9,7 +9,7 @@ categories: AI Comparison
 
 _A detailed analysis of the differences between these AI architectures_
 
-![DeepSeek vs ChatGPT Comparison](./assets/deepseekGPT.png)
+![DeepSeek vs ChatGPT Comparison](../../../../../assets/deepseekGPT.png)
 
 ## What are DeepSeek and ChatGPT?
 
