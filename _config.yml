@@ -2,7 +2,7 @@
 title: Maryane Castro blog
 email: 
 description: "programming and animals."
-baseurl: ""
+baseurl: "/blog"
 url: "http://maryane-castro.github.io"
 github_username:  maryane-castro
 linkedin_username: maryane-castro
