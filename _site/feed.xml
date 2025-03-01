@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2025-03-01T12:20:03-03:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Maryane Castro blog</title><subtitle>programming and animals</subtitle><entry><title type="html">Anaconda libstdc++.so.6: version `GLIBCXX_3.4.20’ not found</title><link href="http://localhost:4000/blog/anaconda/error/fix/2025/03/01/post-1.html" rel="alternate" type="text/html" title="Anaconda libstdc++.so.6: version `GLIBCXX_3.4.20’ not found" /><published>2025-03-01T09:48:04-03:00</published><updated>2025-03-01T09:48:04-03:00</updated><id>http://localhost:4000/blog/anaconda/error/fix/2025/03/01/post-1</id><content type="html" xml:base="http://localhost:4000/blog/anaconda/error/fix/2025/03/01/post-1.html"><![CDATA[<p>Recently, while trying to run an Anaconda environment, I encountered the following error:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2025-03-01T12:50:08-03:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Maryane Castro blog</title><subtitle>programming and animals</subtitle><entry><title type="html">Anaconda libstdc++.so.6: version `GLIBCXX_3.4.20’ not found</title><link href="http://localhost:4000/blog/anaconda/error/fix/2025/03/01/post-1.html" rel="alternate" type="text/html" title="Anaconda libstdc++.so.6: version `GLIBCXX_3.4.20’ not found" /><published>2025-03-01T09:48:04-03:00</published><updated>2025-03-01T09:48:04-03:00</updated><id>http://localhost:4000/blog/anaconda/error/fix/2025/03/01/post-1</id><content type="html" xml:base="http://localhost:4000/blog/anaconda/error/fix/2025/03/01/post-1.html"><![CDATA[<p>Recently, while trying to run an Anaconda environment, I encountered the following error:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>libstdc++.so.6: version `GLIBCXX_3.4.20' not found
 </code></pre></div></div>
@@ -40,4 +40,87 @@
 
 <p>If you also encountered this error, you can check out the <a href="https://stackoverflow.com/questions/48453497/anaconda-libstdc-so-6-version-glibcxx-3-4-20-not-found">full post on StackOverflow</a> for more details.</p>
 
-<p>I hope this solution is helpful for you too! If you have any questions, feel free to comment or reach out!</p>]]></content><author><name></name></author><category term="anaconda" /><category term="error" /><category term="fix" /><summary type="html"><![CDATA[Recently, while trying to run an Anaconda environment, I encountered the following error:]]></summary></entry></feed>
+<p>I hope this solution is helpful for you too! If you have any questions, feel free to comment or reach out!</p>]]></content><author><name></name></author><category term="anaconda" /><category term="error" /><category term="fix" /><summary type="html"><![CDATA[Recently, while trying to run an Anaconda environment, I encountered the following error:]]></summary></entry><entry><title type="html">DeepSeek vs ChatGPT</title><link href="http://localhost:4000/blog/ai/comparison/2025/03/01/post-2.html" rel="alternate" type="text/html" title="DeepSeek vs ChatGPT" /><published>2025-03-01T00:00:00-03:00</published><updated>2025-03-01T00:00:00-03:00</updated><id>http://localhost:4000/blog/ai/comparison/2025/03/01/post-2</id><content type="html" xml:base="http://localhost:4000/blog/ai/comparison/2025/03/01/post-2.html"><![CDATA[<h1 id="deepseek-vs-chatgpt">DeepSeek vs ChatGPT</h1>
+
+<p><em>A detailed analysis of the differences between these AI architectures</em></p>
+
+<p><img src="./assets/deepseekGPT.png" alt="DeepSeek vs ChatGPT Comparison" /></p>
+
+<h2 id="what-are-deepseek-and-chatgpt">What are DeepSeek and ChatGPT?</h2>
+
+<p>DeepSeek and ChatGPT are two artificial intelligence models focused on natural language processing (NLP). Both have the ability to generate text, answer questions, and assist in various tasks, but they have distinct architectures that impact their performance and efficiency.</p>
+
+<h2 id="deepseek">DeepSeek</h2>
+
+<p><strong>Architecture:</strong> MoE (Mixture-of-Experts)</p>
+
+<p>DeepSeek adopts the <strong>Mixture-of-Experts (MoE)</strong> approach, a technique that distributes workload among multiple experts within the model. This means that:</p>
+
+<ul>
+  <li>The model contains multiple internal experts specializing in different tasks.</li>
+  <li>For each request, only a subset of these experts is activated.</li>
+  <li>This approach improves computational efficiency, as there is no need to activate the entire model for each input.</li>
+  <li>MoE can make training more efficient, reducing inference costs at scale.</li>
+</ul>
+
+<p>This architecture is particularly useful for handling a wide variety of tasks without excessively increasing computational requirements.</p>
+
+<h2 id="chatgpt">ChatGPT</h2>
+
+<p><strong>Architecture:</strong> Transformers</p>
+
+<p>ChatGPT is based on the traditional <strong>transformer</strong> architecture, which forms the foundation of most modern NLP models. The main characteristics of this architecture include:</p>
+
+<ul>
+  <li>The entire model is activated for each request, ensuring a uniform approach.</li>
+  <li>ChatGPT uses attention mechanisms (self-attention) to process context and generate coherent responses.</li>
+  <li>The transformer architecture has been extensively studied and improved, making it highly reliable for general AI tasks.</li>
+  <li>Although robust, using the entire model in each interaction may require more computational resources compared to MoE.</li>
+</ul>
+
+<p>This approach allows ChatGPT to be highly versatile and provide well-contextualized, accurate responses.</p>
+
+<h2 id="key-differences">Key Differences</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>DeepSeek (MoE)</th>
+      <th>ChatGPT (Transformers)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Model Activation</strong></td>
+      <td>Only a few experts are activated</td>
+      <td>The entire model is utilized</td>
+    </tr>
+    <tr>
+      <td><strong>Computational Efficiency</strong></td>
+      <td>More efficient, as it saves resources</td>
+      <td>Less efficient, as it uses the whole network</td>
+    </tr>
+    <tr>
+      <td><strong>Scalability</strong></td>
+      <td>Easily scalable, activating experts as needed</td>
+      <td>Scalable but with higher computational cost</td>
+    </tr>
+    <tr>
+      <td><strong>Versatility</strong></td>
+      <td>Focused experts can make the model highly specialized</td>
+      <td>Versatile for a wide range of applications</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Both architectures have advantages and disadvantages depending on the use case:</p>
+
+<ul>
+  <li><strong>DeepSeek (MoE)</strong>: Better for scalability and computational efficiency, activating only specific experts for each request.</li>
+  <li><strong>ChatGPT (Transformers)</strong>: More versatile, as it utilizes the entire model, but may be more demanding in terms of computational resources.</li>
+</ul>
+
+<p>In the end, the choice between DeepSeek and ChatGPT depends on the use case and available resources. MoE models are excellent for highly specialized tasks, while traditional transformers remain a reliable choice for general applications.</p>]]></content><author><name></name></author><category term="AI" /><category term="Comparison" /><summary type="html"><![CDATA[DeepSeek vs ChatGPT]]></summary></entry></feed>
