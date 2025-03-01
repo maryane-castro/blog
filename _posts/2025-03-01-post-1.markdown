@@ -5,44 +5,44 @@ date:   2025-03-01 09:48:04 -0300
 categories: anaconda error fix
 ---
 
-Recentemente, ao tentar rodar um ambiente do Anaconda, me deparei com o seguinte erro:
+Recently, while trying to run an Anaconda environment, I encountered the following error:
 
 ```
 libstdc++.so.6: version `GLIBCXX_3.4.20' not found
 ```
 
-Esse erro ocorre geralmente quando a versão da biblioteca `libstdc++.so.6` no seu sistema não é compatível com o ambiente do Anaconda que você está usando. Esse tipo de problema é comum quando há incompatibilidade entre a versão da biblioteca C++ do seu sistema e a versão esperada pelo Anaconda.
+This error usually occurs when the version of the `libstdc++.so.6` library on your system is not compatible with the Anaconda environment you are using. This type of problem is common when there is an incompatibility between your system's C++ library version and the version expected by Anaconda.
 
-Após muita pesquisa, encontrei uma solução no StackOverflow, que foi a maneira mais rápida e eficiente de corrigir o problema.
+After extensive research, I found a solution on StackOverflow that was the quickest and most efficient way to fix the problem.
 
-### Como resolvi:
+### How I solved it:
 
-A solução proposta foi atualizar o link simbólico da biblioteca `libstdc++.so.6` para a versão correta dentro do ambiente do Anaconda. Para isso, você deve rodar o seguinte comando:
+The proposed solution was to update the symbolic link of the `libstdc++.so.6` library to the correct version within the Anaconda environment. To do this, run the following command:
 
 ```bash
 ln -sf /usr/lib/x86_64-linux-gnu/libstdc++.so.6 ${CONDA_PREFIX}/lib/libstdc++.so.6
 ```
 
-**Explicação do comando:**
-- `ln -sf`: cria um link simbólico forçado, substituindo o arquivo de destino se já existir.
-- `/usr/lib/x86_64-linux-gnu/libstdc++.so.6`: é o caminho da versão da biblioteca no sistema.
-- `${CONDA_PREFIX}/lib/libstdc++.so.6`: é o caminho onde o Anaconda espera encontrar a biblioteca.
+**Command explanation:**
+- `ln -sf`: creates a forced symbolic link, replacing the destination file if it already exists.
+- `/usr/lib/x86_64-linux-gnu/libstdc++.so.6`: is the path to the library version on the system.
+- `${CONDA_PREFIX}/lib/libstdc++.so.6`: is the path where Anaconda expects to find the library.
 
-Este comando cria um link simbólico dentro do seu ambiente Anaconda apontando para a versão correta da biblioteca, o que resolve a incompatibilidade.
+This command creates a symbolic link inside your Anaconda environment pointing to the correct library version, resolving the incompatibility.
 
-### Como aplicar a solução:
+### How to apply the solution:
 
-1. Abra o terminal.
-2. Ative o ambiente Anaconda que está apresentando o erro.
-3. Execute o comando mencionado acima.
-4. Verifique se o problema foi resolvido executando seu código novamente.
+1. Open the terminal.
+2. Activate the Anaconda environment that is showing the error.
+3. Run the command mentioned above.
+4. Check if the problem is resolved by running your code again.
 
-### Resultados:
+### Results:
 
-Após rodar o comando, o erro foi corrigido e pude continuar meu trabalho normalmente sem mais problemas relacionados a esse erro.
+After running the command, the error was fixed, and I was able to continue my work without any further issues related to this error.
 
-### Referências:
+### References:
 
-Se você também se deparou com esse erro, pode conferir o [post completo no StackOverflow](https://stackoverflow.com/questions/48453497/anaconda-libstdc-so-6-version-glibcxx-3-4-20-not-found) para mais detalhes.
+If you also encountered this error, you can check out the [full post on StackOverflow](https://stackoverflow.com/questions/48453497/anaconda-libstdc-so-6-version-glibcxx-3-4-20-not-found) for more details.
 
-Espero que essa solução seja útil para você também! Se tiver qualquer dúvida, sinta-se à vontade para comentar ou entrar em contato!
+I hope this solution is helpful for you too! If you have any questions, feel free to comment or reach out!

@@ -1,43 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2025-03-01T11:06:53-03:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Maryane Castro blog</title><subtitle>programming and animals</subtitle><entry><title type="html">Anaconda libstdc++.so.6: version `GLIBCXX_3.4.20’ not found</title><link href="http://localhost:4000/blog/anaconda/error/fix/2025/03/01/post-1.html" rel="alternate" type="text/html" title="Anaconda libstdc++.so.6: version `GLIBCXX_3.4.20’ not found" /><published>2025-03-01T09:48:04-03:00</published><updated>2025-03-01T09:48:04-03:00</updated><id>http://localhost:4000/blog/anaconda/error/fix/2025/03/01/post-1</id><content type="html" xml:base="http://localhost:4000/blog/anaconda/error/fix/2025/03/01/post-1.html"><![CDATA[<p>Recentemente, ao tentar rodar um ambiente do Anaconda, me deparei com o seguinte erro:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2025-03-01T12:20:03-03:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Maryane Castro blog</title><subtitle>programming and animals</subtitle><entry><title type="html">Anaconda libstdc++.so.6: version `GLIBCXX_3.4.20’ not found</title><link href="http://localhost:4000/blog/anaconda/error/fix/2025/03/01/post-1.html" rel="alternate" type="text/html" title="Anaconda libstdc++.so.6: version `GLIBCXX_3.4.20’ not found" /><published>2025-03-01T09:48:04-03:00</published><updated>2025-03-01T09:48:04-03:00</updated><id>http://localhost:4000/blog/anaconda/error/fix/2025/03/01/post-1</id><content type="html" xml:base="http://localhost:4000/blog/anaconda/error/fix/2025/03/01/post-1.html"><![CDATA[<p>Recently, while trying to run an Anaconda environment, I encountered the following error:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>libstdc++.so.6: version `GLIBCXX_3.4.20' not found
 </code></pre></div></div>
 
-<p>Esse erro ocorre geralmente quando a versão da biblioteca <code class="language-plaintext highlighter-rouge">libstdc++.so.6</code> no seu sistema não é compatível com o ambiente do Anaconda que você está usando. Esse tipo de problema é comum quando há incompatibilidade entre a versão da biblioteca C++ do seu sistema e a versão esperada pelo Anaconda.</p>
+<p>This error usually occurs when the version of the <code class="language-plaintext highlighter-rouge">libstdc++.so.6</code> library on your system is not compatible with the Anaconda environment you are using. This type of problem is common when there is an incompatibility between your system’s C++ library version and the version expected by Anaconda.</p>
 
-<p>Após muita pesquisa, encontrei uma solução no StackOverflow, que foi a maneira mais rápida e eficiente de corrigir o problema.</p>
+<p>After extensive research, I found a solution on StackOverflow that was the quickest and most efficient way to fix the problem.</p>
 
-<h3 id="como-resolvi">Como resolvi:</h3>
+<h3 id="how-i-solved-it">How I solved it:</h3>
 
-<p>A solução proposta foi atualizar o link simbólico da biblioteca <code class="language-plaintext highlighter-rouge">libstdc++.so.6</code> para a versão correta dentro do ambiente do Anaconda. Para isso, você deve rodar o seguinte comando:</p>
+<p>The proposed solution was to update the symbolic link of the <code class="language-plaintext highlighter-rouge">libstdc++.so.6</code> library to the correct version within the Anaconda environment. To do this, run the following command:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ln</span> <span class="nt">-sf</span> /usr/lib/x86_64-linux-gnu/libstdc++.so.6 <span class="k">${</span><span class="nv">CONDA_PREFIX</span><span class="k">}</span>/lib/libstdc++.so.6
 </code></pre></div></div>
 
-<p><strong>Explicação do comando:</strong></p>
+<p><strong>Command explanation:</strong></p>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">ln -sf</code>: cria um link simbólico forçado, substituindo o arquivo de destino se já existir.</li>
-  <li><code class="language-plaintext highlighter-rouge">/usr/lib/x86_64-linux-gnu/libstdc++.so.6</code>: é o caminho da versão da biblioteca no sistema.</li>
-  <li><code class="language-plaintext highlighter-rouge">${CONDA_PREFIX}/lib/libstdc++.so.6</code>: é o caminho onde o Anaconda espera encontrar a biblioteca.</li>
+  <li><code class="language-plaintext highlighter-rouge">ln -sf</code>: creates a forced symbolic link, replacing the destination file if it already exists.</li>
+  <li><code class="language-plaintext highlighter-rouge">/usr/lib/x86_64-linux-gnu/libstdc++.so.6</code>: is the path to the library version on the system.</li>
+  <li><code class="language-plaintext highlighter-rouge">${CONDA_PREFIX}/lib/libstdc++.so.6</code>: is the path where Anaconda expects to find the library.</li>
 </ul>
 
-<p>Este comando cria um link simbólico dentro do seu ambiente Anaconda apontando para a versão correta da biblioteca, o que resolve a incompatibilidade.</p>
+<p>This command creates a symbolic link inside your Anaconda environment pointing to the correct library version, resolving the incompatibility.</p>
 
-<h3 id="como-aplicar-a-solução">Como aplicar a solução:</h3>
+<h3 id="how-to-apply-the-solution">How to apply the solution:</h3>
 
 <ol>
-  <li>Abra o terminal.</li>
-  <li>Ative o ambiente Anaconda que está apresentando o erro.</li>
-  <li>Execute o comando mencionado acima.</li>
-  <li>Verifique se o problema foi resolvido executando seu código novamente.</li>
+  <li>Open the terminal.</li>
+  <li>Activate the Anaconda environment that is showing the error.</li>
+  <li>Run the command mentioned above.</li>
+  <li>Check if the problem is resolved by running your code again.</li>
 </ol>
 
-<h3 id="resultados">Resultados:</h3>
+<h3 id="results">Results:</h3>
 
-<p>Após rodar o comando, o erro foi corrigido e pude continuar meu trabalho normalmente sem mais problemas relacionados a esse erro.</p>
+<p>After running the command, the error was fixed, and I was able to continue my work without any further issues related to this error.</p>
 
-<h3 id="referências">Referências:</h3>
+<h3 id="references">References:</h3>
 
-<p>Se você também se deparou com esse erro, pode conferir o <a href="https://stackoverflow.com/questions/48453497/anaconda-libstdc-so-6-version-glibcxx-3-4-20-not-found">post completo no StackOverflow</a> para mais detalhes.</p>
+<p>If you also encountered this error, you can check out the <a href="https://stackoverflow.com/questions/48453497/anaconda-libstdc-so-6-version-glibcxx-3-4-20-not-found">full post on StackOverflow</a> for more details.</p>
 
-<p>Espero que essa solução seja útil para você também! Se tiver qualquer dúvida, sinta-se à vontade para comentar ou entrar em contato!</p>]]></content><author><name></name></author><category term="anaconda" /><category term="error" /><category term="fix" /><summary type="html"><![CDATA[Recentemente, ao tentar rodar um ambiente do Anaconda, me deparei com o seguinte erro:]]></summary></entry></feed>
+<p>I hope this solution is helpful for you too! If you have any questions, feel free to comment or reach out!</p>]]></content><author><name></name></author><category term="anaconda" /><category term="error" /><category term="fix" /><summary type="html"><![CDATA[Recently, while trying to run an Anaconda environment, I encountered the following error:]]></summary></entry></feed>
